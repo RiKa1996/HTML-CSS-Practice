@@ -1,0 +1,2251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Ubuntu", sans-serif; */
+    font-family: 'chewy', cursive;
+}
+
+html{
+    font-size: 12px;
+}
+
+/* ====================about em, rem px =============== */
+.px-unit{
+    background-color: rgba(180, 156, 156, 0.4);
+    font-weight: 600;
+    color: #262626;
+    border: 2px solid black;
+    /* width: 1500px; */
+    width: 70vw;
+    height: 10vh;
+    margin: auto;        /* block line element hai jb hi center hota hai ///////////ye  inline element me center nhi hota */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 3px -3px 1px blue, 3px -3px 0px green;
+}
+
+.container{
+    box-sizing: border-box;
+    background-color: rgba(180, 156, 156, 0.4);
+    font-weight: 600;
+    color: #262626;
+    border: 2px solid black;
+    /* width: 1500px; */
+    width: 70vw;
+    height: 30vh;
+    /* font-size: 1em; */
+    /* font-size: 18px; */
+    margin: 25px auto;        /* block line element hai jb hi center hota hai ///////////ye  inline element me center nhi hota */
+} 
+
+.container p{
+    font-size: 1.5rem;
+}
+
+/* ====================Text Direction==================== */
+.text-container{
+    text-align: center;
+    
+}
+
+.text-container .direction-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background: gray;
+    margin: auto;
+    width: 35vh;
+    /* line-height: 3em; */
+}
+
+.text-container .direction-container h2{
+    font-size: 4em;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: #0e2f56;
+    
+}
+
+.text-container .direction-container h3{
+    writing-mode: vertical-lr;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #0e2f20;
+    background-color: aqua;
+    /* border-radius: 4px; */
+    letter-spacing: 1.2em;
+    padding-top: 26px;
+    margin: 35px;
+    line-height: 1px;
+}
+
+.text-container .direction-container h4{
+    font-size: 3.5em;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: #0e2f70;
+    text-transform: uppercase;
+    
+}
+
+/* ===================text-overflow=========visible,hidden,scroll,auto============== */
+.text-photo{
+    font-size: 18px;
+    display: flex;
+    justify-self: center;
+    gap: 15px;
+    float: left;
+    margin: 25px;
+}
+
+.overflow-text{
+    /* overflow: visible; */       /* by default visible hi hota hai. */
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow: auto;
+    height: 11em;
+    width: 60em;
+    border: 1.5px solid gray;   
+    text-transform: math-auto;              /* 15.8: Text Transform */
+    letter-spacing: 2px;                    /* 15.9: Letter Spacing */
+    line-height: 2rem;
+    text-indent: 50px;                      /* 15.10: Text Indent */
+}
+.photo-overflow{
+
+}
+
+.photo-overflow img{
+    opacity: .9;
+    width: 350px;
+}
+
+/* ==================15.7: Text Shadow====================*/
+.shadow-container{
+    display: flex;
+    padding: 25px;
+    
+}
+
+.card-shadow{                  /* Section 32.2: drop shadow */
+    padding: 25px 15px;
+    /* border: 1px solid red; */
+    margin: 0 10px;
+    background-color: lightcyan;
+    /* box-shadow: 10px 10px 1px 1px lightblue; */
+    /* box-shadow: 10px 10px 1px 1px rgba(red, green, blue, alpha); */    /* RGBA KA USE HUM KR SKTE HAI. */
+    box-shadow: inset 10px 10px 30px 0px  lightgreen, inset -5px -4px 38px -2px  blue;         /* Section 32.3: inner drop shadow */
+}
+
+.card-shadow h2{
+    text-shadow: 2px -2px 1px blueviolet, 2px -2px 0px red;
+}
+
+.card-shadow p{
+    text-indent: 50px;
+    font-weight: 700;
+}
+
+/* ======================15.11 Text-Decoration =============================*/
+.text-decoration1{
+    text-align: center;
+    justify-content: center;
+    padding: 25px;
+    line-height: 30px;
+}
+
+.text-decoration1 .h1-decoration{
+    text-decoration: line-through underline overline; 
+    text-decoration-color: red;
+    /* text-decoration-skip:; */
+    text-decoration-style: solid;
+    text-decoration-thickness: -5px;;
+}
+
+.text-decoration1 p{
+    /* text-decoration: underline;
+    text-decoration-color: #0e2f70;
+    text-decoration-style: wavy; */
+    font-size: 16px;
+    text-decoration: underline green double 2px;
+    word-spacing: 5px;                                      /* 15.12: Word Spacing*/
+    font-variant: small-caps;                               /* 15.13: Font Variant*/   
+}
+
+/* 16.1: Dynamic Vertical and Horizontal Centering (align-items, justify-content  */
+.justify-div h4{
+    height: 20vh;
+    width: 20%;
+    background-color: lightgray;
+    border: 1px solid black;
+    color: darkmagenta;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.align-div{
+    margin: auto;
+    max-width: 50%;
+    height: 300px;
+    background-color: lightskyblue;
+    padding: 2px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row-reverse;     /* row/coloum/row-reverse/coloum-reverse */
+    align-items: center;
+    margin: 10px auto;
+}
+
+/* ====================================16.2: Sticky Variable-Height Footer=================== */
+.sticky-footer{
+    width: 80vw;
+    /*height: 250px; */
+    background-color: lightcyan;
+    display: grid;
+    margin: auto;
+    padding: 5px;
+}
+
+.sticky-head-name ul{
+    background-color: lightgreen;
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 75px;
+    list-style: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 100px;
+    position: sticky;  
+    top: 0px; 
+}
+
+.sticky-head-name li:hover{
+    color: blue;
+}
+
+.sticky-paragraph p{
+    font-size: 14px;
+    padding: 2px 10px;
+    overflow: auto;
+    height: 200px;
+    text-align: justify;
+}
+
+.sticky-footer-name h5{
+    background-color: lightgreen;
+    display: grid;
+    text-align: center;
+    /* justify-content: space-around; */
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    justify-content: center;
+    /* gap: 75px; */
+    /* list-style: none; */
+    /* font-weight: 700; */
+    font-size: 13px;
+    padding: 5px 0 0 0;
+    position: sticky;  
+    top: 0px; 
+}
+.sticky-footer-name a{
+    background-color: lightgreen;
+    display: grid;
+    text-align: center;
+    /* justify-content: space-around; */
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    justify-content: center;
+    /* gap: 75px; */
+    /* list-style: none; */
+    /* font-weight: 700; */
+    padding: 5px 100px;
+    font-size: 13px;
+    position: sticky;  
+    bottom: 1px;
+}
+
+/* ===============================16.3: Optimally fit elements to their container ==========================*/
+.optimal-element{
+    height: 100%;
+    background-color: lightyellow;
+    display: flex;
+    /* flex-direction: row; 
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+.flex-item{
+    display: flex;
+    justify-content: center;
+    background-color: #ccf;
+    margin: 0.5em;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 238px;
+    
+}
+
+/* ==================16.4: Holy Grail Layout using Flexbox========================== */
+.holy-grail{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.holy-grail>*{
+    margin: 10px 0;
+    padding: 5px;
+    flex: 1 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-flexbox{
+    background-color: lightseagreen;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+}
+
+.holy-footer{
+    color: white;
+    font-size: 8px;
+    background-color: blue;
+    height: 60px;
+    position: sticky;
+    bottom: 0px;
+}
+
+.article-flexbox{
+    color: black;
+    text-align:justify;
+    background-color: rgb(215, 233, 239);
+    height: 300px;
+    font-size: 20px;
+}
+
+.article-flexbox p{
+    height: 300px;
+    overflow: auto;
+    font-size: 18px;
+    padding: 3px 12px;
+}
+
+.aside1{
+    background-color: yellow;
+    height: 300px;
+}
+
+.aside2{
+    
+    background-color: red;
+    height: 300px;
+}
+
+@media all and (min-width: 800px){
+    .article-flexbox{
+        flex: 3;
+    }
+
+    .aside1{
+        order: 1;
+    }
+
+    .aside2{
+        order: 2;
+    }
+
+    .article-flexbox{
+        order: 2;
+    }
+
+    .holy-footer{
+        order: 4;
+    }
+}
+
+@media all and (min-width: 600px){
+    .aside{
+        flex: 1;
+        grid-template-rows: repeat();
+    }
+}
+
+/* ===================16.6: Same height on nested containers================================= */
+.nested-height{
+    background-color: #fff;
+    border-radius: 15px 15px;
+    /* box-shadow: -5px -5px 12px rgba(16, 1, 1, .25); */
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-height{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img-nested{
+    margin-left: 20px;
+    border: 0.1px solid yellowgreen;
+    
+}
+
+.description-card{
+    object-fit: contain;
+    margin-top: 3px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+button{
+    border: initial;
+    background: initial;
+    font: inherit;
+}
+
+.toy-button{
+    margin-top: 10px;
+    background-color: rgb(5, 36, 104);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 1000px;
+    margin-top: auto;
+}
+
+.toy-button:hover{
+    background-color: green;
+    color: black;
+    font-weight: 600;
+}
+
+.container-nested{
+    max-width: 100%;
+    padding: 100px;
+    margin: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 15px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.nested-height:nth-of-type(1){
+    flex: 1 250px;
+    background-color: lightblue;
+    border: 1px solid darkorchid;
+}
+
+.nested-height:nth-of-type(2){
+    flex: 1 250px;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid darkorchid;
+}
+
+.nested-height:nth-of-type(3){
+    flex: 1 250px;
+    background-color: lightseagreen;
+    border: 1px solid darkorchid;
+}
+
+/* ========================17: Cascading and Specificity======================== */
+.specificity-code{
+    font-family: 'chewy', cursive;
+    font-size: 8rem;
+    margin: 0.25em auto;
+    font-weight: 700;
+    color: firebrick;
+    display: flex;
+    justify-content: center;
+    background-color:#ccf ;
+}
+
+.defination{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 200px;
+    color: blue ;
+}
+
+.source{
+    color: black;
+    font-size: 22px;
+    margin: 5px 200px;
+    color: rgb(110, 4, 53) ;
+}
+
+.defination{
+    color: indianred !important; 
+}
+
+.defination{
+    color: rgb(228, 233, 228);
+}
+
+/* =========================18.1: currentColor======================== */
+.current-color{
+    background-color: aquamarine;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid color-mix(in lab, currentColor 85%, white);
+    border-radius: 5px;
+}
+
+.currentColor-code{
+    color: darkgreen;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.deff2{
+    color: blue;
+    justify-content: center;
+    font-weight: bold;
+    font-size: medium;
+    margin: 10px 150px;
+    margin-bottom: 50px;
+}
+
+.deff2 span{
+    color: color-mix(in lab, red 100%, currentColor 20%);
+}
+
+.deff2 a{
+    color: color-mix(in lab, green 90%, currentColor 35%);
+    
+}
+
+/* ===================== 18.2: Color Keywords================================= */
+.rgb-color{
+    margin: 30px 30px;
+}
+
+.keywords-of-colors{
+    color: darkmagenta;         /* color keyword */
+    color: #0e2f56;             /* hex color code */
+    color: rgb(201, 101, 230);  /* RGB color code */
+    color: rgba(5, 5, 216, 0.5);
+    color: hsl(180, 76%, 42%);
+    color: hsla(300, 92%, 49%, 0.5);
+    margin: 5px 10px;
+}
+
+/* =========================== 19.1: Opacity Property======19.2: IE Compatibility for `opacity`======================== */
+.opacity-box{
+    --bg-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/04/Lamp-3D-Wallpaper-photos-images.jpg");
+    --bg-image-opacity: .65;
+
+    font-size: 20px;
+    margin: 10px 10px;
+    /* opacity: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    position: relative;
+    isolation: isolate;
+    font-weight: 700;
+    /* opacity: var(--bg-image-opacity); */
+    background: transparent;
+}
+
+.opacity-box::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    /* background-color: pink; */
+    opacity: var(--bg-image-opacity);
+    background: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    /* filter: opacity(.9); */
+    /* filter:brightness(.3); */
+    /* filter: contrast(200%); */
+    /* filter: drop-shadow(25px 16px 20px rgb(61, 4, 175)); */
+    /* filter: invert(70%); */
+    /* filter: saturate(30%); */
+    /* filter: sepia(60%); */
+    filter: blur(5px);
+    /* filter: grayscale(50%); */
+}
+
+/* =============================21.1: Pseudo-Elements========================== */
+/* .main-pseudo{
+    margin: 0 35px;
+} */
+
+.pseudo-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-pseudo::before{
+    content: "";
+    background: url("https://images.unsplash.com/photo-1717511140281-52586e5e307d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 59%;
+    /* top: 0; */
+    /* left: 0; */
+    z-index: -1;
+    opacity: .8;
+    /* filter: contrast(50%); */
+}
+
+.navigation-pseudo{
+    display: flex;
+    font-size: 20px; 
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-pseudo li{
+    font-family: "Roboto Slab", serif;
+}
+
+section{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px 23px; */
+    margin: 12px 95px;
+    align-items: center;
+    /* border: 2px solid indigo; */
+}
+
+/* section::before{
+    content: "This is my world style";
+} */
+
+.section-pseudo h1{
+    font-size: 3rem;
+}
+
+.section-pseudo p{
+    text-align: center;
+}
+
+.rishu{
+    list-style: none;
+    padding: 20px 25px;
+}
+
+                /* ::marker pseudo element */
+.marker-element{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.marker-css-pseudo li{
+    font-family: "Roboto Slab", serif;
+    padding: 0 3px;  
+    margin: 10px 65px; 
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.marker-css-pseudo ol li::marker{
+    color: blue;
+    font-size: 25px;
+}
+
+.marker-css-pseudo ul li::marker{
+    content: "🤣";
+    color: rgb(163, 7, 132);
+    font-size: 25px;
+}
+
+.h3-marker-pseudo{
+    counter-increment: h3;
+    display: list-item;
+    color: black;
+    margin: 0 35px;
+}
+
+
+
+.h3-marker-pseudo::marker{
+    display: list-item;
+    content: "#" counter(h3) " ";
+    color: indianred;
+    font-weight: bold;
+}
+
+/* ==================::first-letter, ::first-line, ::selection, ::placeholder============== */
+.pseudo-selection{
+    margin: 30px 30px;
+    
+}
+
+.first-letter-pseudo{
+    font-family: "Roboto Slab", serif;
+    justify-content: center;
+    display: flex;
+}
+
+.first-letter-pseudo::selection{                   /* ::selection elements */
+    background-color: green;
+    color: blue;
+}
+
+.first-letter-a{
+    font-size: 18px;
+}
+
+.first-letter-a::first-letter{                       /* ::first-letter */
+    color: red;
+    font-size: 25px;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+}
+
+.first-letter-a::selection{                         /* ::selection elements */
+    background-color: indigo;
+    color: white;
+}                          
+
+.first-letter-b::first-line{                       /* ::first-line */
+    color: red;
+    font-size: 25px;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+}
+
+::placeholder{
+    color: red;
+    margin: 5px;   
+}
+
+/* ==============PROJECT=======Debate with rishav===================== */
+.debate-rishav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:  25vh;
+    background: black;
+}
+
+.name-rishav{
+    color: blue;
+    position: relative;
+    margin: 0;
+    font-size: 5em;
+    font-weight: 900;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.name-rishav span{
+    color: green;
+}
+
+.name-rishav::before{
+    content: "";
+    position: absolute;
+    left: 110%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, red 5%, indigo) ;
+    animation: alternate 5.5s linear forwards;
+}
+
+@keyfarmes alternate
+{
+    0%
+    {
+        left: 110%
+    }
+    100%
+    {
+        left:-20%
+    }
+}
+
+/* =======================Chapter 22: Positioning========================static, relative,fixed, absolute, inttial, inherit, sticky, unset */
+.parent-positioning-all{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+/*     transform: translate(0); */
+    /* position: absolute; */
+   /*  position: relative; */
+   /* transform: translate(0); */    /* ye absolute-position ke liye hai. parent me transform element likhne per */
+   /* filter: invert(2%); */        /* THESE ARE EXMPTION OF ABOSOLUTE POSITION */
+   /* perspective: 0em; */
+}
+
+.box{
+    width: 10vw;
+    height: 100px;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 5px;
+}
+            /* relative position */
+.box-all-position1{
+    background-color: lightgreen;
+}
+
+.box-all-position2{
+    background-color: lightgoldenrodyellow;
+    position: relative;
+    top: 40px;
+    right: 10px;
+}
+
+.box-all-position3{
+    background-color: lightslategray;
+}
+
+.box-all-position4{
+    background-color: lightblue;
+}
+
+            /* abousolute position */
+
+.box-all-positionA{
+    background-color: red;
+    color: white;
+}
+.box-all-positionB{
+    background-color: blue;
+    color: white;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 14vw;
+}
+.box-all-positionC{
+    background-color: indigo;
+    color: white;
+}
+.box-all-positionD{
+    background-color: black;
+    color: white;
+}
+
+            /* z-index */
+.box-all-position11{
+    background-color: khaki;
+    position: relative;
+    z-index: -1;
+    top: 70px;
+    left: 10px;
+}
+.box-all-position22{
+    background-color: indianred;
+    color: white;
+    position: relative;
+    z-index: 0;
+    top: 10px;
+    right: 10px;
+}
+.box-all-position33{
+    background-color: violet;
+    position: relative;
+    z-index: 1;
+    bottom: 25px;
+    right: -30px;
+}
+.box-all-position44{
+    background-color: lawngreen;
+    position: relative;
+    z-index: 2;
+    bottom: 200px;
+    right: 30px;
+    
+}
+
+            /* fixed-position */
+.box-all-positionF{
+    background-color: rgb(222, 6, 132);
+    color: white;
+}
+.box-all-positionFF{
+    background-color: rgb(216, 222, 216);
+    color: black;
+    position: fixed;
+    z-index: -1;
+    top: 23vh;
+    left: 43.5vw;
+}
+.box-all-positionFFF{
+    background-color: rgb(209, 222, 225);
+    color: black;
+    
+}
+.box-all-positionFFFF{
+    background-color: rgb(6, 221, 199);
+    
+}
+
+            /* fixed-position */
+.box-all-positionS{
+    background-color: rgb(5, 107, 105);
+    color: white;
+    position: sticky;
+    top: 0;   
+}
+
+.box-all-positionSS{
+    background-color: rgb(221, 240, 9);
+    color: black;    
+}
+
+.box-all-positionSSS{
+    background-color: rgb(100, 100, 156);
+    color: black;
+    
+}
+.box-all-positionSSSS{
+    background-color: rgb(51, 131, 1);
+    
+}
+
+/* ===================Chapter 23: Layout Control=============================================== */
+/* ===================Chapter 24: grid=============================================== */
+.container-grid{
+    width: 100%;
+    height: 500px;
+    border: 2px solid black;
+    padding: 16px;
+    display: grid;
+    /* gap: 8px; */       
+    row-gap: 5px;
+    column-gap: 5px;
+    /* grid-template-columns: 10% 49% 40%; */
+    /* grid-template-columns: 2fr 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-columns: repeat(4, 100px); */
+    /* grid-template-columns: repeat(auto-fill, 100px); */
+
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 50px;
+    
+    /* align-content: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+.box-grid{
+    border: 2px solid rgb(143, 9, 129);
+    padding: 10px;
+    
+}
+
+#box-1{
+    justify-self: stretch;
+    background-color: #98f1b8;
+    color: black;
+    /* grid-column-start: 1; */
+    /* grid-column-end: 4; */
+    /* grid-column: 1/4;    */            /* this is shortcut property to define grid columns and rows */
+    /* grid-column: 1 / span 3 ; */
+    grid-column: 1/-1;
+    
+}
+#box-2{
+    grid-row: 2 / 5;
+    background-color: red;
+}
+
+#box-3{
+    /* grid-row: -4/ -1; */
+}
+
+#box-4{
+    
+    grid-row: -4/ -1;
+}
+
+#box-6{
+    grid-column: 3 / -1;
+    grid-row: -1 /-2;
+    /* grid-area: auto; */
+}
+
+/* =========================Chapter 25: Tables============================================== */
+.table-tag{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    caption-side: top;                            /* 25.5: caption-side */
+}
+
+.table-img{
+    margin: auto;
+}
+
+.train-table{
+    font-family: "Ubuntu", sans-serif;
+    border-collapse: separate;                      /* 25.3: border-collapse */
+    /* border-collapse: collapse; */
+    border-spacing: 8px 6px;                            /* 25.4: border-spacing */
+}
+
+td{
+    border: 1px solid rgb(17, 3, 141);
+    font-family: "Ubuntu", sans-serif;
+    color: black;
+    table-layout: auto;
+    
+}
+
+/* =======================Chapter 26: Transitions============================== */
+.transition-container{
+    height: 50vh;
+    width: 60vw;
+    background-color: darkgreen;
+    margin: 20px;
+    color: white;
+    padding: 5px;
+    
+}
+
+.box-transition{
+    height: 12vh;
+    width: 12vw;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: backgroud-color, transform;            /* important hai.  background-color: #98f1b8;*/
+    transition-duration: 10s;                                         /* 26.1: Transition shorthand */
+    transition-timing-function: ease-in-out;      /* linear, ease-in-out, ease-in, ease-out */   /* 26.2: cubic-bezier */
+    transition-delay: 1s;
+    /* border-bottom-right-radius: 60px; */
+    border-bottom-left-radius: 60px;
+}
+
+.box-transition:hover{
+    background-color: #98f1b8;
+}
+
+.box-translate{
+    transform: translateX(70vw) translateY(10vh) scale(1);
+    background-color: rgb(214, 31, 31);
+
+}
+
+/* ==============================Chapter 27: Animations============================= */
+.animation-container{
+    height: 25vh;
+    width: 70vw;
+    background-color: #98f1b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.box-animation{
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;                    /* important */
+    /* animation-name: karanKaAnimation;             
+    animation-duration: 1s */
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    margin: 15px;
+
+}
+.box-animation:hover{
+    /* animation-name: karanKaAnimation;
+    animation-duration: .8s;
+    animation-direction:alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+    animation-play-state: running;
+    animation-fill-mode: forwards; */
+    /* will-change: contents; */
+    animation: karanKaAnimation .8s ease-in-out .5s infinite alternate-reverse forwards,
+            rishavKaAnimation .8s ease-in-out .5s infinite alternate-reverse forwards,
+            riyaKaAnimation .18s ease-in-out .15s infinite alternate-reverse forwards;
+}
+
+@keyframes karanKaAnimation{
+    form{
+        /* transform: translateX() ;*/
+        background-color: red;
+        
+    }
+
+    to{
+        background-color: blue;
+        transform: translateX(500px);
+    }
+    
+}
+
+@keyframes riyaKaAnimation{
+    form{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+/* @keyframes karanKaAnimation{
+    form{
+        transform: skew(0deg);
+    }
+
+    to{
+        transform: skew(360deg);
+    }
+    
+} */
+
+@keyframes rishavKaAnimation{
+        0% { background-color: #ff0000; }
+    8.333% { background-color: #ff8000; }
+    16.667% { background-color: #ffff00; }
+    25.000% { background-color: #80ff00; }
+    33.333% { background-color: #00ff00; }
+    41.667% { background-color: #00ff80; }
+    50.000% { background-color: #00ffff; }
+    58.333% { background-color: #0080ff; }
+    66.667% { background-color: #0000ff; }
+    75.000% { background-color: #8000ff; }
+    83.333% { background-color: #ff00ff; }
+    91.667% { background-color: #ff0080; }
+    100.00% { background-color: #ff0000; }
+    
+}
+
+/* =========================================Chapter 28: 2D Transforms======================================================== */
+.transform-box{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(243, 190, 190);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+                    /* for matrix transfrom */
+.matrix-transform{
+    height: 80px;
+    width: 120px;
+    background-color: #0e2f56;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 1s;
+}
+
+.matrix-transform:hover{
+    transform: matrix(1, 3, 5, 0, 0, 1);
+    cursor: alias;
+}
+
+                    /* for rotate transform */
+.rotate-transform{
+    height: 80px;
+    width: 120px;
+    background-color: #8d0e7e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.rotate-transform:hover{
+    transform: rotate(360deg);
+    cursor: crosshair;
+}
+
+                    /* for rotateX transform */
+.rotateX-transform{
+    height: 80px;
+    width: 120px;
+    background-color: #7807dc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.rotateX-transform:hover{
+    transform: rotateX(180deg);
+    cursor: ew-resize;
+}
+
+                    /* for rotateY transform */
+.rotateY-transform{
+    height: 80px;
+    width: 120px;
+    background-color: #dc0740;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.rotateY-transform:hover{
+    transform: rotateY(180deg);
+    cursor: none;
+}
+
+                    /* for rotateZ transform */
+.rotateZ-transform{
+    height: 80px;
+    width: 120px;
+    background-color: #07bc25;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.rotateZ-transform:hover{
+    transform: rotateZ(180deg);
+    cursor: text;
+}
+
+                    /* for Scale transform */
+.scale-transform{
+    height: 80px;
+    width: 120px;
+    background-color: indigo;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.scale-transform:hover{
+    transform: scale(3,2);     /* we can use below 1 number; like .2, .5 these type off */
+    cursor: row-resize;
+}
+
+                    /* for ScaleX transform */
+.scaleX-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(10, 94, 178);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.scaleX-transform:hover{
+    transform: scaleX(2);     /* we can use below 1 number; like .2, .5 these type off */
+    cursor: not-allowed;
+}
+
+                    /* for ScaleY transform */
+.scaleY-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(202, 153, 7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.scaleY-transform:hover{
+    transform: scaleY(2);     /* we can use below 1 number; like .2, .5 these type off */
+    cursor: ne-resize;
+}
+
+                    /* for ScaleZ transform */
+.scaleZ-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(169, 20, 127);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.scaleZ-transform:hover{
+    transform: perspective(300px) scaleZ(5) rotateY(-30deg);     /* we can use below 1 number; like .2, .5 these type off */
+    cursor: grabbing;
+}
+
+                    /* for skew transform */
+.skew-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(48, 68, 171);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.skew-transform:hover{
+    transform: skew(45deg);     /* we can use below 1 number; like .2, .5 these type off */
+    cursor: wait;
+}
+
+                    /* for skewX transform */
+.skewX-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(199, 196, 12);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.skewX-transform:hover{
+    transform: skewX(45deg);     /* we can use below 1 number; like .2, .5 these type off */
+    cursor: vertical-text;
+}
+
+                    /* for skewY transform */
+.skewY-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(110, 5, 121);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.skewY-transform:hover{
+    transform: skewY(45deg);     /* we can use below 1 number; like .2, .5 these type off */
+    cursor: move;
+}
+                    /* for translate(x,y) transform */
+.translate-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(231, 103, 34);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.translate-transform:hover{
+    transform: translate(200px, 200px);
+    cursor: col-resize;
+}
+                     /* for translateX transform */
+.translateX-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(58, 131, 62);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.translateX-transform:hover{
+    transform: translateX(200px);
+    cursor: zoom-in;
+}
+
+                    /* for translateY transform */
+.translateY-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(86, 213, 230);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.translateY-transform:hover{
+    transform: translateY(200px);
+    cursor: nw-resize;
+}
+
+                    /* for translateZ transform */
+.translateZ-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(6, 177, 160);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.translateZ-transform:hover{
+    transform: perspective(200px) translateZ(150px);
+    transform: tr;
+    cursor: help;
+}
+
+                    /* for Multiple transform */
+.multiple-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(183, 41, 102);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.multiple-transform:hover{
+    transform: rotate(360deg) translateX(200px);
+    cursor: no-drop;
+}
+
+                    /* for transform-origin property */
+.origin-transform{
+    height: 80px;
+    width: 120px;
+    background-color: rgb(183, 41, 102);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 2s ease-in-out 0s;
+}
+
+.origin-transform:hover{
+    transform: rotate(180deg);
+    transform-origin: -100px -50px;        /* top right, top left, bottom left, bottom right */
+    cursor:progress;
+}
+
+/* ============================Chapter 29: 3D Transforms===================================== */
+.transform3d-box{
+    height: 50vh;
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    padding: 25px;
+}
+
+.box3d{
+    height: 100px;
+    width: 100px;
+    color: white;
+    background-image: linear-gradient(to top left, #555 0%, #555 40%, #444 50%, #333 97%);
+    box-shadow: inset 6px 6px 30px 8px #b93e3e; 
+    
+}
+.box3d:hover{
+    transform: rotateY(85deg) rotateZ(45deg);   /* Section 29.1: Compass pointer or needle shape using 3D transforms */
+}
+
+/* ================Section 29.3: backface-visibility========================================= */
+.backface-visible{
+    height: 50vh;
+    width: 100%;
+    background-color: white;
+    padding: 25px;
+}
+
+.box-backface{
+    height: 200px;
+    width: 200px;
+    margin-left: 250px;
+    position: absolute;
+}
+
+.content-visible{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.box-backface:hover .content-visible{
+    transform: rotateY(180deg);
+}
+
+.front-visible,
+.back-visible{
+    border-radius: 50%;
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    background: red;
+    position: absolute;
+    text-align: center;
+    backface-visibility: hidden;        /* Section 29.3: backface-visibility */
+    line-height: 200px;
+    
+}
+
+.back-visible{
+   /*  background: #0080ff; */
+    transform: rotateY(180deg);
+    border-radius: 50%;
+    
+}
+
+/* ==============Section 31.2: pointer-events===================== */
+.pointer-event{
+    width: 100%;
+    height: 25px;
+    background-color: lightblue;
+    padding: 30px;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.pointer-event a{
+    color: black;
+    pointer-events: none;
+    
+}
+
+/* ====================Section 31.3: caret-color====================== */
+.carte-color{
+    width: 100%;
+    height: 25px;
+    background-color: rgb(244, 76, 244);
+}
+
+.color-cursor{
+    margin: 25px;
+    text-align: center;
+    caret-color: blue;
+    /* caret-color: transparent; */
+}
+
+/* Chapter 33: Shapes for Floats with circle, ellipse, inset, polygon */
+.shape-outside{
+    height: 440px;
+    width: 100%;
+    padding: 10px;
+}
+
+.shape-outside img:nth-of-type(1){
+    float: left;
+    clip-path: circle(50% at 50% 50%);
+    margin: auto;
+    shape-outside: circle(50% at 50% 50%);
+    shape-margin: 10px;
+    width: 300px;
+    margin-right: 15px;
+}
+
+.shape-outside img:nth-of-type(2){
+    float: right;
+    clip-path: ellipse(50% at 50% 50%);
+    margin: auto;
+    shape-outside: ellipse(50% at 50% 50%);
+    shape-margin: 20px;
+    width: 300px;
+    margin-left: 15px;
+}
+
+.shape-outside p{
+    text-align: center;
+    line-height: 20px;
+    text-align: justify;
+}
+
+/* =========================Chapter 34: List Styles========================= */
+.list-style{
+    --color:indigo;
+    width: 100%;
+    background-color: lightgray;
+    color: var(--color);
+    padding: 5px 7vw;
+}
+
+.list-style p{
+    font-size: 20px;
+    color: blue;
+    font-weight: 700;
+}
+
+.list-style ul{
+    /* list-style-type: lower-greek; */
+    list-style-position: outside;
+    list-style-image:url('C:/Users/pappu kumar/OneDrive/Desktop/HTML3/decode-image/social media_icon.png');
+}
+
+.list-style ol{
+    list-style-type: lower-roman;
+    /* list-style-position: outside; */
+    list-style-position: outside;
+    content: counter(iterm);
+}
+
+/* ======================Chapter 35: Counters===================================== */
+.counter-increment{
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 5px 45px;
+    counter-reset: section;
+}
+
+.counter-increment > h3{
+    color: green;
+}
+
+.counter-increment p{
+    margin: 7px 0;
+    padding-left: 25px;
+}
+
+.h2-counter{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    counter-reset: subsection;
+}
+
+.h2-counter:before{
+    content: "Section " counter(section) " : ";
+    counter-increment: section;
+    color: crimson;
+    background-color: lightgreen;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+:root{
+    --color:yellow;
+}
+
+.h3-counter::before{
+    --color: rgb(187, 6, 166);                     /* variable cascading */
+    content: counter(section) "." counter(subsection) " : ";
+    counter-increment: subsection;
+    color: var(--color);
+}
+
+/* ==========================================Chapter 38: Single Element Shapes============================================== */
+.single-elementshape{
+    width: 100%;
+    background-color: lightpink;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape-elements{
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    /* border-top: 100px solid blue; */
+    border-bottom: 50px solid rgb(41, 180, 7);
+    border-top: 50px solid rgb(180, 7, 7);
+    border-right: 50px solid rgb(9, 84, 153);
+    border-left: 50px solid rgb(147, 6, 96);
+    /* border-top: 50px solid white; */
+    /* margin: auto; */
+}
+
+/* .shape-tringle{
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid rgb(10, 161, 114);
+    border-top: 100px solid rgb(26, 3, 111);
+    border-right: 100px solid rgb(231, 55, 55);
+    border-left: 100px solid rgb(70, 10, 161);
+    border-right: 100px solid yellowgreen ;
+} */
+
+.shape-tringle-left{
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid rgb(101, 6, 87);
+    border-left: 100px solid transparent;
+    
+}
+
+.shape-tringle-right{
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid rgb(7, 147, 179);
+    border-right: 100px solid transparent;
+    
+}
+.shape-tringle-top{
+    width: 0;
+    height: 0;
+    border-right: 100px solid rgb(41, 7, 179);
+    border-bottom: 100px solid transparent;
+    
+}
+.shape-tringle-bottom{
+    width: 0;
+    height: 0;
+    border-top: 100px solid rgb(10, 214, 34);
+    border-right: 100px solid transparent;
+    
+}
+.shape-circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(22, 66, 100);
+}
+.burst-shape{
+    background-color: rgb(11, 144, 17);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    /* -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+ */
+}
+.burst-shape::before, .burst-shape::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    
+    /* -ms-transform: rotate(135deg);
+    transform: rotate(135deg); */
+}
+.burst-shape::before{
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+    background-color: rgb(32, 237, 100);
+}
+
+.burst-shape::after{
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+    background-color: rgb(209, 216, 12);
+}
+.cube-shape{
+    height: 100px;
+    width: 100px;
+    background-color: #1f0470;
+    position: relative;
+    
+}
+.cube-shape::before{
+    content: "";
+    background-color: #564a99;
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    top: -32px;
+    left: 13px;
+    transform: skewX(-41deg);
+
+}
+.cube-shape::after{
+    content: "";
+    background-color: #352d65;
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 100px;
+    top: -16px;
+    left: 102px;
+    transform: skewY(-49deg);
+
+}
+.pyramid-shape{
+    width: 100px;
+    height: 200px;
+    position: relative;
+    margin: 50px;
+}
+.pyramid-shape::before, 
+.pyramid-shape::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 40px solid;
+    position: absolute;
+}
+.pyramid-shape::before {
+    background-color:   #ff5656 ;        /* top , bottom, right, left */
+    transform: scaleY(2) skewY(-40deg) rotate(45deg);
+}
+
+.pyramid-shape::after {
+    background-color:   #d64444 ;        /* top , bottom, right, left */
+    transform: scaleY(2) skewY(40deg) rotate(-45deg);
+}
+
+/* =================================Chapter 39: Columns===================================== */
+.column-story{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.columns-chapter{
+    padding: 0px 20px 20px 20px ;
+    
+    text-align: justify;
+    columns: 4;             /* Section 39.1: Simple Example (column-count) */
+    /* -moz-column-width: 100px;
+    -webkit-column-width: 100px; */
+    /* column-width: 100px; */              /* Section 39.2: Column Width */
+    column-count: 3; 
+    column-gap: 35px;
+    column-rule-style:groove;
+    column-rule-color: red;   
+    column-rule-width: 1px; 
+    column-span: all;
+    
+}
+
+/* ===============================Chapter 41: Inline-Block Layout================================ */
+.inline-block{
+    width: 100%;
+    background: whitesmoke;
+    padding: 15px 65px;
+}
+
+.paraA-block{
+    text-align: center;
+    color: red;
+    line-height:20px;
+}
+
+ul.list-inline{
+    color: black;
+    list-style: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    margin-bottom: -1.4em;
+}
+
+ul.list-inline::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+li.list2-inline{
+    display: inline-block;
+}
+
+/* ======================================Chapter 42: Inheritance======================================= */
+.inherit-box{
+    padding: 10px 50px;
+    font-size: 23px;
+}
+
+.inheritance-inherit{
+    color: #a51058;
+}
+
+#ram{
+    color: red;
+    
+}
+#shayam{
+    color: rgb(11, 82, 175);
+}
+#intial{
+    color: initial;
+}
+
+#inherit{
+    color: inherit;
+}
+/* =========================================Chapter 43: CSS Image Sprites===================================== */
+.image-sprites{
+    margin: 10px 25px;
+    background-color: rgb(190, 182, 182);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+#india-imageA{
+    height: 80px;
+    width: 80px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0000ff;
+    background: url("https://png.pngtree.com/png-clipart/20190613/original/pngtree-world-flags-collection-set-png-image_3575821.jpg");
+    background-size: 400px;       /* height autometic arrenge hoga */
+    background-repeat: no-repeat;
+    background-position: -12px -58px;
+    
+}
+
+#india-imageB{
+    height: 80px;
+    width: 80px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0000ff;
+    background: url("https://png.pngtree.com/png-clipart/20190613/original/pngtree-world-flags-collection-set-png-image_3575821.jpg");
+    background-size: 400px;       /* height autometic arrenge hoga */
+    background-repeat: no-repeat;
+    background-position: -237px -137px;    
+}
+#india-imageC{
+    height: 80px;
+    width: 80px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0000ff;
+    background: url("https://png.pngtree.com/png-clipart/20190613/original/pngtree-world-flags-collection-set-png-image_3575821.jpg");
+    background-size: 400px;       /* height autometic arrenge hoga */
+    background-repeat: no-repeat;
+    background-position: -163px -298px;   
+}
+
+/* ================================================Chapter 44: Clipping and Masking============================= */
+.clip-path{
+    width: 100%;
+    padding: 15px 10px;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+.h1-clip-path{
+    font-weight: 900;
+    font-size: 200px;
+    font-family:'Times New Roman', Times, serif;
+    background-image: url("https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip:text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -3px;
+    position: relative;
+}
+
+/* .h1-clip-path::before{
+    contain: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url("https://www.pngmart.com/files/22/Splash-PNG-Isolated-Image.png");
+    background-size: 100%;
+    background-position: center;
+    mix-blend-mode: screen;
+} */
+
+/* ==============================================Section 44.3: Clipping (Circle)===============================*/
+.clip-pathcircle{
+    width: 100%;
+    background-color: rgb(155, 88, 88);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle-clippath{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 200px;
+    width: 200px;
+    background: url("https://images.unsplash.com/photo-1577544060849-3fc4e4a5ba01?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    clip-path: circle(50% at 40% 50%);
+    background-size: cover;
+    mask-image: linear-gradient(to right, black, transparent);
+}
+.polygon-clippath{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 200px;
+    width: 200px;
+    background: url("https://images.unsplash.com/photo-1583336663277-620dc1996580?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    /* clip-path: polygon(0 0 0 100% 100% 50%);
+    -webkit-clip-path:polygon(0 0 0 100% 100% 50%); */
+    background-size: cover;
+    mask-image: linear-gradient(to right, rgb(243, 242, 242), transparent);
+    mask-border: 2px solid blue;
+    clip-path: polygon(19% 105%, 26% 104%,3% 36%,49% 3%, 100% 35%);
+}
+.ellipse-clippath{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 200px;
+    width: 200px;
+    background: url("https://images.unsplash.com/photo-1531300185372-b7cbe2eddf0b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    mask-image: linear-gradient(to right, rgb(243, 242, 242), transparent);
+    mask-border: 2px solid blue;
+    clip-path: ellipse(99% 48% at 100% 53%);
+}
+.holl-circle-clippath{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 200px;
+    width: 200px;
+    background: url("https://images.unsplash.com/photo-1442689859438-97407280183f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    mask-image: radial-gradient(circle farthest-side at center, transparent 49%, rgb(218, 20, 20) 50%);   
+}
+                    /* Section 44.6: Using masks to create images with irregular shapes */
+.mask-position{
+    position: relative;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 200px;
+    width: 250px;
+    background: url("https://images.unsplash.com/photo-1525253086316-d0c936c814f8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    mask-image: linear-gradient(to top right, transparent 49.5%, white 50.5%), linear-gradient(to top
+    left, transparent 49.5%, white 50.5%),linear-gradient(white, white);
+    mask-size: 75% 25%, 25% 25%, 100% 75%;
+    mask-position: bottom left, bottom right, top left;
+    mask-repeat: no-repeat;
+}
+
+/* ============================Chapter 45: Fragmentation/Section 45.1: Media print page-break=========================== */
+.h1-fragmentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+}
+.page-fragmentation{
+    margin: 10px 30px;
+    text-align: justify;
+
+}
+.p-fragmentation{
+    margin: 10px 0;
+}
+.h2-fragmentation{
+    break-before:page ;   
+}
+
+/* ================================= Section 47.1: Basic @supports usage================*/
+.supports-query{
+    height: 100px;
+    width: 100%;
+    font-weight: 700;
+    font-size: large;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* @supports (text-underline-offset: 2px) and (not(display: flex)) */
+@supports (text-underline-offset: 2px) and (display: flex) {                    /* oprator==and , or, not */
+    .supports-query{
+        background: orange;
+        padding: 25px 40px;
+        border: 2px solid black;
+        
+    }
+}
+
+/* =================Chapter 50: Vertical Centering///Section 50.1: Centering with display: table================= */
+.table-caption{
+    display: table-caption;
+    text-align: center;
+    color: blue;
+}
+.table-display-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.centering-display {
+    padding-bottom: 20px;
+}
+
+#header-centering{
+    display: table-header-group;
+    background: lightcyan;
+    font-size: 18px;
+}
+#footer-centering{
+    display: table-footer-group;
+    background: lightcyan;
+    font-size: 15px;
+}
+#row-centering{
+    display: table-row-group;
+}
+
+/* .h1-centering{
+    text-align: center;
+} */
+
+#column-centering{
+    display: table-column-group;
+}
+
+.table-columns{
+    display: table-column;
+}
+.col-2{
+    background: rgb(236, 218, 218);
+}
+.col-7{
+    font-weight: bold;
+    background: lightgreen;
+}
+
+#display-table-centering{
+    display: table-row;
+    width: 1000px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.column-diplay{
+    display: table-cell;
+    border: 1px solid black;
+    padding: 2px 10px;
+    text-align: center;
+    display: table-f;
+    vertical-align: middle;
+}
+
+/* ======================Section 50.2: Centering with Flexbox=========================== */
+/* ======================Chapter 51: Object Fit and Placement=========================== */
+.object-fit{
+    width: 100%;
+    background: rgb(202, 196, 196);
+    padding: 10px 20px;
+    display: flex;
+    gap: 100px;
+}
+
+.object-placement img{
+    height: 250px;
+    width: 250px;
+    border: 2px solid white;
+    object-fit: contain;
+    object-position:center;
+}
+
+/* ======================Chapter 53: Browser Support & Prefixes=========================== */
+.browser-support{
+    width: 100%;
+    background-color: lightgreen;
+    padding: 10px 40px;
+}
+.broser-prefixe{
+    border-radius: 2px;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: skewX(30deg);
+    -webkit-transform: skewX(30deg);
+    -moz-transform: skewX(30deg);
+    -ms-transform: skewX(30deg);
+    -o-transform: skewX(30deg);
+    zoom: 2;
+}

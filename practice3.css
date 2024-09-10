@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    /* font-family: 'chewy', cursive; */
+}
+
+html, body{
+    /* font-size: 15px; */
+    overflow:hidden;
+    
+    overflow:hidden;
+    background: lightblue
+}
+/* ==================================================================================================================== */
+/* Section 29.2: 3D text effect with shadow */
+.text-shadow3D{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    perspective-origin: 50% 50% ;
+    perspective: 200px;
+}
+
+.rishav-shadow{
+    text-align: center;
+    font-size: 10vmin;
+    color: blueviolet;
+    line-height: 1em;
+    transform: rotateY(20deg);
+    transition:transform 2s;
+    perspective: 150px;
+    perspective-origin: 0% 50%;
+    
+
+}
+
+.rishav-shadow:hover{
+    transform:rotateY(-20deg);
+    animation-iteration-count: infinite;
+}
+
+.rishav-shadow:after{
+    content:attr(data-content);
+    position:absolute;
+    left:0;top:0;
+    transform-origin:50% 100%;
+    transform:rotateX(-90deg);
+    color:#0099CC;
+}
+
+.text-shadow3D:before{
+    content: attr(data-content);
+    position: absolute;
+    top: 0%;
+    left: -25%;
+    height: 328%;
+    width: 180%;
+    background:rgba(255,255,255,0.7);
+    transform-origin: 0 100%;
+    transform: translatez(-200px) rotate(40deg) skewX(35deg);
+    border-radius:0 0 100% 0;
+}
